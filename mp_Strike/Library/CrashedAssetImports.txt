@@ -1,0 +1,1 @@
+Assets/CombatCharacterPack/Soldiers/Textures/PBR/Team5/Soldier_Team5_Normal.png
