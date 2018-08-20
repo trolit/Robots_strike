@@ -20,7 +20,7 @@ Cel: Poznanie uNet</br>
 
 
 
-#### Z pomocą(warto zajrzeć): ####
+#### źródło(warto zajrzeć): ####
 
 > [Brackeys](https://www.youtube.com/user/Brackeys/videos)
 
