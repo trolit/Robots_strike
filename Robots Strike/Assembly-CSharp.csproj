@@ -61,9 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\PlayerMotor.cs" />
-    <Compile Include="Assets\PlayerSetup.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerMotor.cs" />
+    <Compile Include="Assets\Scripts\PlayerSetup.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Git/bin/AbovetheLaw/Robots Strike/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
