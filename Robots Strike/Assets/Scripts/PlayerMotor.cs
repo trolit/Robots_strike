@@ -10,7 +10,12 @@ public class PlayerMotor : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
     private Vector3 rotation = Vector3.zero;
-    private Vector3 cameraRotation = Vector3.zero;
+    private float cameraRotationX = 0f;
+    private float currentCameraRotationX = 0f;
+    private Vector3 thrusterForce = Vector3.zero;
+
+    [SerializeField]
+    private float cameraRotationLimit = 85f;
 
     private Rigidbody rb;
 
@@ -34,11 +39,17 @@ public class PlayerMotor : MonoBehaviour
     }
 
     // gets a rotational vector for the camera
-    public void RotateCamera(Vector3 _cameraRotation)
+    public void RotateCamera(float _cameraRotationX)
     {
-        cameraRotation = _cameraRotation;
+        cameraRotationX = _cameraRotationX;
     }
 
+    // get a force vector for our thruster
+    public void ApplyThruster(Vector3 _thrusterForce)
+    {
+        thrusterForce = _thrusterForce;
+    }
+    
     // run every physix iteration
     private void FixedUpdate()
     {
@@ -55,6 +66,11 @@ public class PlayerMotor : MonoBehaviour
             // move a player from position that he currently is + velocity vector
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
         }
+
+        if(thrusterForce != Vector3.zero)
+        {
+            rb.AddForce(thrusterForce * Time.fixedDeltaTime, ForceMode.Acceleration);
+        }
     }
 
     void PerformRotation()
@@ -67,7 +83,15 @@ public class PlayerMotor : MonoBehaviour
             // without - it would be reversed so it would be like this:
             // moving mouse up - screen goes down
             // moving mouse down - screen goes up
-            cam.transform.Rotate(-cameraRotation);
+
+
+            // new rotational calculation
+            // set our rotation and clamp it and then we apply our rotation to 
+            // the transform of our camera
+            currentCameraRotationX -= cameraRotationX;
+            currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -cameraRotationLimit, cameraRotationLimit);
+
+            cam.transform.localEulerAngles = new Vector3(currentCameraRotationX, 0f, 0f);
         }
     }
 }
