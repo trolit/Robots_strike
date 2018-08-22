@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 
+[RequireComponent(typeof(Player))]
+
 // dziedziczymy z klasy NetworkBehaviour
 public class PlayerSetup : NetworkBehaviour
 {
@@ -32,15 +34,17 @@ public class PlayerSetup : NetworkBehaviour
                 sceneCamera.gameObject.SetActive(false);
             }
         }
-
-        RegisterPlayer();
     }
 
-    void RegisterPlayer()
+    // whenever someone joins..
+    public override void OnStartClient()
     {
-        // get reference of Identity Network 
-        string _ID = "Player " + GetComponent<NetworkIdentity>().netId;
-        transform.name = _ID;
+        base.OnStartClient();
+
+        string _netID = GetComponent<NetworkIdentity>().netId.ToString();
+        Player _player = GetComponent<Player>();
+
+        GameManager.RegisterPlayer(_netID, _player);
     }
 
     void AssignRemoteLayer()
@@ -63,5 +67,8 @@ public class PlayerSetup : NetworkBehaviour
         {
             sceneCamera.gameObject.SetActive(true);
         }
+
+        // deregister player on disconnection
+        GameManager.UnRegisterPlayer(transform.name);
     }
 }
