@@ -550,7 +550,7 @@ MonoBehaviour:
   cam: {fileID: 20197994686524944}
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
 --- !u!114 &114261689163643732
 MonoBehaviour:
   m_ObjectHideFlags: 1

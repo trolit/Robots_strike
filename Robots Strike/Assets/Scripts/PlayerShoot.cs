@@ -37,12 +37,11 @@ public class PlayerShoot : NetworkBehaviour
     {
         RaycastHit _hit;
 
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out _hit, weapon.range, mask))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out _hit, weapon.range, mask) )
         {
-            // we hit something  
+            // we hit PLAYER  
             if(_hit.transform.tag == PLAYER_TAG)
             {
-                Debug.Log("We hit " + _hit.collider.name);
                 CmdPlayerShot(_hit.collider.name, weapon.damage);
             }
         }
