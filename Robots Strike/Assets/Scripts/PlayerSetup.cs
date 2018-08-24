@@ -34,6 +34,8 @@ public class PlayerSetup : NetworkBehaviour
                 sceneCamera.gameObject.SetActive(false);
             }
         }
+
+        GetComponent<Player>().Setup();
     }
 
     // whenever someone joins..
