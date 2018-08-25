@@ -488,6 +488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a9a798042aeab4c8c2716820facaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  matchSettings:
+    respawnTime: 3
 --- !u!4 &1019644446
 Transform:
   m_ObjectHideFlags: 0
@@ -605,6 +607,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 8, z: 8}
   m_Center: {x: 0, y: 4, z: 0}
+--- !u!1001 &1522219546
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4569339655599672, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 14.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569339655599672, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569339655599672, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569339655599672, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569339655599672, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569339655599672, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569339655599672, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4569339655599672, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &2035964974
 GameObject:
   m_ObjectHideFlags: 0

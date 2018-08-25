@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(ConfigurableJoint))]
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float thrusterForce = 1000f;
 
+
     [Header("Spring settings:")]
     [SerializeField]
     private JointDriveMode jointMode = JointDriveMode.Position;
@@ -21,13 +23,16 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float jointMaxForce = 40f;
 
+    // Component caching
     private PlayerMotor motor;
     private ConfigurableJoint joint;
+    private Animator animator;
 
     private void Start()
     {
         motor = GetComponent<PlayerMotor>();
         joint = GetComponent<ConfigurableJoint>();
+        animator = GetComponent<Animator>();
 
         SetJointSettings(jointSpring);
     }
@@ -37,14 +42,17 @@ public class PlayerController : MonoBehaviour {
         /* SEGMENT ODPOWIADAJĄCY ZA RUCH */
 
         // Calculate movement velocity as a 3D vector
-        float _xMov = Input.GetAxisRaw("Horizontal");
-        float _zMov = Input.GetAxisRaw("Vertical");
+        float _xMov = Input.GetAxis("Horizontal");
+        float _zMov = Input.GetAxis("Vertical");
 
         Vector3 _movHorizontal = transform.right * _xMov;
         Vector3 _movVertical = transform.forward * _zMov;
 
         // final movement Vector
-        Vector3 _velocity = (_movHorizontal + _movVertical).normalized * speed;
+        Vector3 _velocity = (_movHorizontal + _movVertical) * speed;
+
+        // animate movement!!
+        animator.SetFloat("ForwardVelocity", _zMov);
 
         // apply movement
         motor.Move(_velocity);
