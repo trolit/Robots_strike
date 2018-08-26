@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\PlayerSetup.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\PlayerWeapon.cs" />
+    <Compile Include="Assets\WeaponManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Git/bin/AbovetheLaw/Robots Strike/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
