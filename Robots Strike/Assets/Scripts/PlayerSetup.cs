@@ -2,7 +2,7 @@
 using UnityEngine.Networking;
 
 [RequireComponent(typeof(Player))]
-
+[RequireComponent(typeof(PlayerController))]
 // dziedziczymy z klasy NetworkBehaviour
 public class PlayerSetup : NetworkBehaviour
 {
@@ -51,6 +51,14 @@ public class PlayerSetup : NetworkBehaviour
             playerUIInstance = Instantiate(playerUIPrefab);
             // clean clone
             playerUIInstance.name = playerUIPrefab.name;
+
+            // configure player UI
+            PlayerUI ui = playerUIInstance.GetComponent<PlayerUI>();
+            if(ui == null)
+            {
+                Debug.LogError("No player UI component on PlayerUI prefab!");
+            }
+            ui.SetController(GetComponent<PlayerController>());
         }
 
         GetComponent<Player>().Setup();
