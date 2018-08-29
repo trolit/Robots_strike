@@ -25,13 +25,33 @@ public class Player : NetworkBehaviour
     [SyncVar]
     private int currentHealth;
 
-    public void Setup()
-    {
-        wasEnabled = new bool[disableOnDeath.Length];
+    private bool isFirstSetup = true;
 
-        for (int i = 0; i < wasEnabled.Length; i++)
+    public void PlayerSetup()
+    {
+        
+        CmdBroadCastNewPlayerSetup();
+    }
+
+    [Command]
+    private void CmdBroadCastNewPlayerSetup()
+    {
+        RpcSetupPlayerOnAllClients();
+    }
+
+    [ClientRpc]
+    private void RpcSetupPlayerOnAllClients()
+    {
+        if(isFirstSetup)
         {
-            wasEnabled[i] = disableOnDeath[i].enabled;
+            wasEnabled = new bool[disableOnDeath.Length];
+
+            for (int i = 0; i < wasEnabled.Length; i++)
+            {
+                wasEnabled[i] = disableOnDeath[i].enabled;
+            }
+
+            isFirstSetup = false;
         }
 
         SetDefaults();
@@ -95,13 +115,15 @@ public class Player : NetworkBehaviour
     {
         yield return new WaitForSeconds(GameManager.instance.matchSettings.respawnTime);
 
-        SetDefaults();
-
         // get one of spawn points
         Transform _spawnPoint = NetworkManager.singleton.GetStartPosition();
 
         transform.position = _spawnPoint.position;
         transform.rotation = _spawnPoint.rotation;
+
+        yield return new WaitForSeconds(0.1f);
+
+        SetDefaults();
     }
 
     public void SetDefaults()

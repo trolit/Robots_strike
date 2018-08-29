@@ -128,7 +128,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
-  controlID: 28
+  controlID: 122
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 29
+  controlID: 123
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -411,9 +411,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 02a3fcff
-    m_LastClickedID: -220414
-    m_ExpandedIDs: 02a3fcff6cbdfcff76bdfcffacbdfcffbe3efdffcae7ffffe6fbffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: aa3cfffffe46ffff649effff70abffff2cb6ffff16cfffff3ed0ffffd8d1ffffe6fbffff00000000b8330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -468,9 +468,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 19.966536, y: 1.4588362, z: -6.028934}
+    m_Target: {x: 41.256916, y: -3.9063566, z: 8.44537}
     speed: 2
-    m_Value: {x: 19.966536, y: 1.4588362, z: -6.028934}
+    m_Value: {x: 41.256916, y: -3.9063566, z: 8.44537}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -498,13 +498,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.10277516, y: -0.66734886, z: 0.095860496, w: -0.73136437}
+    m_Target: {x: 0.050517756, y: 0.6952387, z: -0.05123832, w: 0.71516836}
     speed: 2
-    m_Value: {x: -0.10277514, y: -0.6673488, z: 0.09586048, w: -0.7313643}
+    m_Value: {x: 0.050517756, y: 0.6952387, z: -0.05123832, w: 0.71516836}
   m_Size:
-    m_Target: 0.8670444
+    m_Target: 95.7544
     speed: 2
-    m_Value: 0.8670444
+    m_Value: 95.7544
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -629,20 +629,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 42
   m_LastFolders:
-  - Assets
+  - Assets/Materials
   m_LastFoldersGridSize: 42
   m_LastProjectPath: D:\Git\bin\AbovetheLaw\Robots Strike
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: c6090000
-    m_LastClickedID: 2502
-    m_ExpandedIDs: 00000000c6090000120a0000240a00006c0a0000b80a0000c20c00007c0e000000ca9a3b
+    m_SelectedIDs: 320b0000
+    m_LastClickedID: 2866
+    m_ExpandedIDs: 00000000c8090000140a0000260a00006e0a0000ba0a0000c60c0000800e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -670,7 +670,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c6090000120a0000240a00006c0a0000b80a0000c20c00007c0e0000
+    m_ExpandedIDs: 00000000c8090000140a0000260a00006e0a0000ba0a0000c60c0000800e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
