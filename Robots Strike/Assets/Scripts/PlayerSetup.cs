@@ -52,7 +52,7 @@ public class PlayerSetup : NetworkBehaviour
             }
             ui.SetController(GetComponent<PlayerController>());
 
-            GetComponent<Player>().PlayerSetup();
+            GetComponent<Player>().SetupPlayer();
         }
     }
 
@@ -97,6 +97,7 @@ public class PlayerSetup : NetworkBehaviour
         Destroy(playerUIInstance);
 
         // jeżeli wychodzimy z gry, włącz kamerę lokalną
+        if(isLocalPlayer)
         GameManager.instance.SetSceneCameraActive(true);
 
         // deregister player on disconnection

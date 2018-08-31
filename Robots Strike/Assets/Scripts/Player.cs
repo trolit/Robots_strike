@@ -37,12 +37,21 @@ public class Player : NetworkBehaviour
 
     private bool isFirstSetup = true;
 
-    public void PlayerSetup()
+    public void SetupPlayer()
     {
-        
+        if (isLocalPlayer)
+        {
+            // switch camera on local player
+            GameManager.instance.SetSceneCameraActive(false);
+
+            // enable player UI
+            GetComponent<PlayerSetup>().playerUIInstance.SetActive(true);
+        }
+
         CmdBroadCastNewPlayerSetup();
     }
 
+    // telling the server that players should be set up
     [Command]
     private void CmdBroadCastNewPlayerSetup()
     {
@@ -67,16 +76,16 @@ public class Player : NetworkBehaviour
         SetDefaults();
     }
 
-    private void Update()
-    {
-        if (!isLocalPlayer)
-            return;
+    //private void Update()
+    //{
+    //    if (!isLocalPlayer)
+    //        return;
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            RpcTakeDamage(9999);
-        }
-    }
+    //    if (Input.GetKeyDown(KeyCode.K))
+    //    {
+    //        RpcTakeDamage(9999);
+    //    }
+    //}
 
     //thanks to ClientRpc if someone gets damaged, the information will spread among
     //all connected players :)
@@ -153,7 +162,8 @@ public class Player : NetworkBehaviour
 
         yield return new WaitForSeconds(0.1f);
 
-        SetDefaults();
+        // throw message to all clients that player is setting up
+        SetupPlayer();
     }
 
     public void SetDefaults()
@@ -180,14 +190,6 @@ public class Player : NetworkBehaviour
         if(_col != null)
         {
             _col.enabled = true;
-        }
-
-        if (isLocalPlayer)
-        {
-            GameManager.instance.SetSceneCameraActive(false);
-
-            // disable player UI
-            GetComponent<PlayerSetup>().playerUIInstance.SetActive(true);
         }
 
         // create spawn effect
