@@ -64,6 +64,7 @@
     <Compile Include="Assets\HostGame.cs" />
     <Compile Include="Assets\JoinGame.cs" />
     <Compile Include="Assets\PlayerUI.cs" />
+    <Compile Include="Assets\RoomListItem.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MatchSettings.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />

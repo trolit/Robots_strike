@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114183487467357742}
   - component: {fileID: 114431330570762638}
   - component: {fileID: 114823063968746632}
+  - component: {fileID: 114928074239166590}
   m_Layer: 5
   m_Name: RoomListItem
   m_TagString: Untagged
@@ -129,7 +130,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114183487467357742}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114928074239166590}
+        m_MethodName: JoinRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114608985618357972
@@ -217,6 +229,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &114928074239166590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091346010883798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5685096c8c3344f4f9c8d032a98f86ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomNameText: {fileID: 114756014927012388}
 --- !u!222 &222226464261644414
 CanvasRenderer:
   m_ObjectHideFlags: 1
