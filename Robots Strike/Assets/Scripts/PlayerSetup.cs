@@ -20,9 +20,9 @@ public class PlayerSetup : NetworkBehaviour
 
     [SerializeField]
     GameObject playerUIPrefab;
-    private GameObject playerUIInstance;
 
-    Camera sceneCamera;
+    [HideInInspector]
+    public GameObject playerUIInstance;
 
     private void Start()
     {
@@ -35,15 +35,7 @@ public class PlayerSetup : NetworkBehaviour
             AssignRemoteLayer();
         }
         else
-        {   // jeżeli wchodzimy do gry, wyłącz kamerę lokalną
-            // (tą, która patrzy od góry)
-            sceneCamera = Camera.main;
-
-            if(sceneCamera != null)
-            {
-                sceneCamera.gameObject.SetActive(false);
-            }
-
+        {   
             // Disable player graphics for Local player(recursive method)
             SetLayerRecursively(playerGraphics, LayerMask.NameToLayer(dontDrawLayerName));
 
@@ -105,10 +97,7 @@ public class PlayerSetup : NetworkBehaviour
         Destroy(playerUIInstance);
 
         // jeżeli wychodzimy z gry, włącz kamerę lokalną
-        if(sceneCamera != null)
-        {
-            sceneCamera.gameObject.SetActive(true);
-        }
+        GameManager.instance.SetSceneCameraActive(true);
 
         // deregister player on disconnection
         GameManager.UnRegisterPlayer(transform.name);
