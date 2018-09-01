@@ -61,22 +61,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HostGame.cs" />
-    <Compile Include="Assets\JoinGame.cs" />
-    <Compile Include="Assets\PauseMenu.cs" />
-    <Compile Include="Assets\PlayerUI.cs" />
-    <Compile Include="Assets\RoomListItem.cs" />
+    <Compile Include="Assets\Arena\Example\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HostGame.cs" />
+    <Compile Include="Assets\Scripts\JoinGame.cs" />
     <Compile Include="Assets\Scripts\MatchSettings.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerMotor.cs" />
     <Compile Include="Assets\Scripts\PlayerSetup.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
+    <Compile Include="Assets\Scripts\PlayerUI.cs" />
     <Compile Include="Assets\Scripts\PlayerWeapon.cs" />
-    <Compile Include="Assets\Util.cs" />
-    <Compile Include="Assets\WeaponGraphics.cs" />
-    <Compile Include="Assets\WeaponManager.cs" />
+    <Compile Include="Assets\Scripts\RoomListItem.cs" />
+    <Compile Include="Assets\Scripts\Util.cs" />
+    <Compile Include="Assets\Scripts\WeaponGraphics.cs" />
+    <Compile Include="Assets\Scripts\WeaponManager.cs" />
+    <None Include="Assets\Arena\Example\ImageEffects\Shaders\SSAOShader.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Git/bin/AbovetheLaw/Robots Strike/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -60,8 +60,9 @@ public class PlayerController : MonoBehaviour {
         // applying gravity from flying over objects
         RaycastHit _hit;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out _hit, 100f))
+        if (Physics.Raycast(transform.position, Vector3.down, out _hit, 100f, environmentMask))
         {
+            // Debug.Log("working!");
             joint.targetPosition = new Vector3(0f, -_hit.point.y, 0f);
         }
         else
