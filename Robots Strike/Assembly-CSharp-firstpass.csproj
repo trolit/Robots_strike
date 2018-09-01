@@ -334,6 +334,9 @@
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/Basia/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
+    <Reference Include="DatabaseControl">
+      <HintPath>D:/Git/bin/AbovetheLaw/Robots Strike/Assets/Database Control Free/Scripts/DatabaseControl.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
     </Reference>
