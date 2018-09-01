@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\HostGame.cs" />
     <Compile Include="Assets\JoinGame.cs" />
+    <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\PlayerUI.cs" />
     <Compile Include="Assets\RoomListItem.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

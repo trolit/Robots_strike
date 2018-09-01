@@ -35,7 +35,8 @@ public class JoinGame : MonoBehaviour
     public void RefeshRoomList()
     {
         ClearRoomList();
-        networkManager.matchMaker.ListMatches(0, 20, "", false, 0, 0, OnMatchList);
+        // in brackeys TRUE?
+        networkManager.matchMaker.ListMatches(0, 20, "", true, 0, 0, OnMatchList);
         status.text = "Loading...";
     }
 
@@ -43,7 +44,7 @@ public class JoinGame : MonoBehaviour
     {
         status.text = "";
 
-        if(matchList == null)
+        if(!success || matchList == null)
         {
             status.text = "Couldnt get room list!";
             return;

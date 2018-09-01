@@ -50,6 +50,11 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
+        if(PauseMenu.isOn)
+        {
+            return;
+        }
+
         // setting target position for sprring
         // this makes the physics at right when it comes to
         // applying gravity from flying over objects
