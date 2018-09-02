@@ -314,6 +314,12 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="DatabaseControl">
+      <HintPath>D:/Git/bin/AbovetheLaw/Robots Strike/Assets/Database Control Free/Scripts/DatabaseControl.dll</HintPath>
+    </Reference>
+    <Reference Include="DatabaseControlEditor">
+      <HintPath>D:/Git/bin/AbovetheLaw/Robots Strike/Assets/Database Control Free/Scripts/Editor/DatabaseControlEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Basia/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>

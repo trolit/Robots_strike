@@ -110,7 +110,7 @@ public class PlayerShoot : NetworkBehaviour
             // we hit PLAYER  
             if(_hit.transform.tag == PLAYER_TAG)
             {
-                CmdPlayerShot(_hit.collider.name, currentWeapon.damage);
+                CmdPlayerShot(_hit.collider.name, currentWeapon.damage, transform.name);
             }
 
             // we hit something, call the OnHit method on the server
@@ -120,13 +120,13 @@ public class PlayerShoot : NetworkBehaviour
 
     // Command - method that is called ONLY ON SERVER!
     [Command]
-    void CmdPlayerShot(string _playerID, int _damage)
+    void CmdPlayerShot(string _playerID, int _damage, string _sourceID)
     {
         // player has been shot
         Debug.Log(_playerID + " has been shot!");
 
         Player _player = GameManager.GetPlayer(_playerID);
 
-        _player.RpcTakeDamage(_damage);
+        _player.RpcTakeDamage(_damage, _sourceID);
     }
 }

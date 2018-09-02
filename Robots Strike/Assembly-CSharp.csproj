@@ -65,6 +65,7 @@
     <Compile Include="Assets\Database Control Free\Demos\C#\Scripts\dcDemo_MenuControl_CSharp.cs" />
     <Compile Include="Assets\DataTranslator.cs" />
     <Compile Include="Assets\LoginMenu.cs" />
+    <Compile Include="Assets\PlayerScore.cs" />
     <Compile Include="Assets\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HostGame.cs" />

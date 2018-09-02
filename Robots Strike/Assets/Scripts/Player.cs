@@ -35,6 +35,10 @@ public class Player : NetworkBehaviour
     [SyncVar]
     private int currentHealth;
 
+    public int kills;
+
+    public int deaths;
+
     private bool isFirstSetup = true;
 
     public void SetupPlayer()
@@ -90,7 +94,7 @@ public class Player : NetworkBehaviour
     //thanks to ClientRpc if someone gets damaged, the information will spread among
     //all connected players :)
     [ClientRpc]
-    public void RpcTakeDamage(int _amount)
+    public void RpcTakeDamage(int _amount, string _sourceID)
     {
         if (isDead)
             return;
@@ -103,13 +107,22 @@ public class Player : NetworkBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            Die(_sourceID);
         }
     }
 
-    private void Die()
+    private void Die(string _sourceID)
     {
         isDead = true;
+
+        Player sourcePlayer = GameManager.GetPlayer(_sourceID);
+
+        if(sourcePlayer != null)
+        {
+            sourcePlayer.kills++;
+        }
+
+        deaths++;
 
         // DISABLE COMPONENTS (cannot move, cannot collider with him, etc.)
         for (int i = 0; i < disableOnDeath.Length; i++)
