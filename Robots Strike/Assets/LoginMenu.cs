@@ -42,19 +42,6 @@ public class LoginMenu : MonoBehaviour {
 	bool isDatabaseSetup = true;
 
 	void Start () {
-
-		////this checks whether the database is setup. It is used to prevent errors for users who try to use the demos
-		////without having setup a database.
-		////You don't need to use this bool as it will work without it as long as the database has been setup
-		//TextAsset datafile = Resources.Load ("data") as TextAsset;
-		//string[] splitdatafile = datafile.text.Split (new string[] { "-" }, StringSplitOptions.None);
-		//if (splitdatafile [0] == "0") {
-		//	isDatabaseSetup = false;
-		//	Debug.Log ("These demos will not work out of the box. You need to setup a database first for it to work. Please read the Setup section of the PDF for more information");
-		//} else {
-		//	isDatabaseSetup = true;
-		//}
-
         isDatabaseSetup = true;
 
         //sets error Texts string to blank
@@ -220,7 +207,7 @@ public class LoginMenu : MonoBehaviour {
 							} else {
 							
 								//ready to send request
-								StartCoroutine (sendRegisterRequest (input_register_username.text, input_register_password.text, "Hello World!")); //calls function to send register request
+								StartCoroutine (sendRegisterRequest (input_register_username.text, input_register_password.text, "[KILLS]0/[DEATHS]0")); //calls function to send register request
 								part = 3; //show 'loading...'
 							}
 						
@@ -258,7 +245,7 @@ public class LoginMenu : MonoBehaviour {
 
     IEnumerator sendRegisterRequest(string username, string password, string data)
     {
-        IEnumerator e = DCF.RegisterUser(username, password, "Hello World"); // << Send request to register a new user, providing submitted username and password. It also provides an initial value for the data string on the account, which is "Hello World".
+        IEnumerator e = DCF.RegisterUser(username, password, "[KILLS]0/[DEATHS]0"); // << Send request to register a new user, providing submitted username and password. It also provides an initial value for the data string on the account, which is "Hello World".
         while (e.MoveNext())
         {
             yield return e.Current;

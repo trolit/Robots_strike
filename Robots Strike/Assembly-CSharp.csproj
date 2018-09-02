@@ -63,7 +63,9 @@
   <ItemGroup>
     <Compile Include="Assets\Arena\Example\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
     <Compile Include="Assets\Database Control Free\Demos\C#\Scripts\dcDemo_MenuControl_CSharp.cs" />
+    <Compile Include="Assets\DataTranslator.cs" />
     <Compile Include="Assets\LoginMenu.cs" />
+    <Compile Include="Assets\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HostGame.cs" />
     <Compile Include="Assets\Scripts\JoinGame.cs" />

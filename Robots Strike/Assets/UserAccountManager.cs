@@ -1,14 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using DatabaseControl;
 using UnityEngine.SceneManagement;
 
 public class UserAccountManager : MonoBehaviour
 {
+
     public static UserAccountManager instance;
 
-    private void Awake()
+    void Awake()
     {
         if (instance != null)
         {
@@ -25,10 +25,10 @@ public class UserAccountManager : MonoBehaviour
 
     public static bool IsLoggedIn { get; protected set; }
 
-    public static string LoggedIn_Data { get; protected set; }
-
     public string loggedInSceneName = "Lobby";
     public string loggedOutSceneName = "LoginMenu";
+
+    public delegate void OnDataReceivedCallback(string data);
 
     public void LogOut()
     {
@@ -37,7 +37,7 @@ public class UserAccountManager : MonoBehaviour
 
         IsLoggedIn = false;
 
-        Debug.Log("User logged out");
+        Debug.Log("User logged out!");
 
         SceneManager.LoadScene(loggedOutSceneName);
     }
@@ -49,7 +49,7 @@ public class UserAccountManager : MonoBehaviour
 
         IsLoggedIn = true;
 
-        Debug.Log("User logged in");
+        Debug.Log("Logged in as " + username);
 
         SceneManager.LoadScene(loggedInSceneName);
     }
@@ -84,27 +84,27 @@ public class UserAccountManager : MonoBehaviour
         }
     }
 
-    public void GetData()
+    public void GetData(OnDataReceivedCallback onDataReceived)
     { //called when the 'Get Data' button on the data part is pressed
 
         if (IsLoggedIn)
         {
             //ready to send request
-            StartCoroutine(sendGetDataRequest(LoggedIn_Username, LoggedIn_Password)); //calls function to send get data request
+            StartCoroutine(sendGetDataRequest(LoggedIn_Username, LoggedIn_Password, onDataReceived)); //calls function to send get data request
         }
     }
 
-    IEnumerator sendGetDataRequest(string username, string password)
+    IEnumerator sendGetDataRequest(string username, string password, OnDataReceivedCallback onDataReceived)
     {
         string data = "ERROR";
 
-        IEnumerator eeee = DatabaseControl.DCF.GetUserData(username, password);
-        while (eeee.MoveNext())
+        IEnumerator ee = DatabaseControl.DCF.GetUserData(username, password);
+        while (ee.MoveNext())
         {
-            yield return eeee.Current;
+            yield return ee.Current;
         }
-        WWW returnedddd = eeee.Current as WWW;
-        if (returnedddd.text == "Error")
+        string returnedd = ee.Current as string;
+        if (returnedd == "Error")
         {
             //Error occurred. For more information of the error, DC.Login could
             //be used with the same username and password
@@ -112,7 +112,7 @@ public class UserAccountManager : MonoBehaviour
         }
         else
         {
-            if (returnedddd.text == "ContainsUnsupportedSymbol")
+            if (returnedd == "ContainsUnsupportedSymbol")
             {
                 //One of the parameters contained a - symbol
                 Debug.Log("Get Data Error: Contains Unsupported Symbol '-'");
@@ -120,11 +120,12 @@ public class UserAccountManager : MonoBehaviour
             else
             {
                 //Data received in returned.text variable
-                string DataRecieved = returnedddd.text;
+                string DataRecieved = returnedd;
                 data = DataRecieved;
             }
         }
 
-        LoggedIn_Data = data;
+        if (onDataReceived != null)
+            onDataReceived.Invoke(data);
     }
 }
