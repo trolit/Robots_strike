@@ -35,6 +35,10 @@ public class Player : NetworkBehaviour
     [SyncVar]
     private int currentHealth;
 
+    public float GetHealthPct()
+    {
+        return (float)currentHealth / maxHealth;
+    }
     [SyncVar]
     public string username = "Loading...";
 
@@ -189,6 +193,9 @@ public class Player : NetworkBehaviour
         isDead = false;
 
         currentHealth = maxHealth;
+
+        // disable cursor
+        Cursor.visible = false;
 
         // enable components
         for (int i = 0; i < disableOnDeath.Length; i++)

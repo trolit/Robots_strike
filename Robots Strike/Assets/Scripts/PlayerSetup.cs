@@ -50,7 +50,7 @@ public class PlayerSetup : NetworkBehaviour
             {
                 Debug.LogError("No player UI component on PlayerUI prefab!");
             }
-            ui.SetController(GetComponent<PlayerController>());
+            ui.SetPlayer(GetComponent<Player>());
 
             GetComponent<Player>().SetupPlayer();
 

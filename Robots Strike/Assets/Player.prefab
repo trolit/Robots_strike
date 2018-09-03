@@ -329,8 +329,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1701147880447682}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.56, y: 1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 245.95999, y: 18.145004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4551119780686692}
@@ -774,7 +774,9 @@ MonoBehaviour:
     bullets: 30
     reloadTime: 5
     graphics: {fileID: 1176657493277348, guid: 91aa7856ca2abbb46986725a87e2f126, type: 2}
+  ammoText: {fileID: 0}
   weaponHolder: {fileID: 4715518511928068}
+  isReloading: 0
 --- !u!114 &114114297687886290
 MonoBehaviour:
   m_ObjectHideFlags: 1

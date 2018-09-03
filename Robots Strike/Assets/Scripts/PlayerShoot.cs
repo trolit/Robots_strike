@@ -111,7 +111,8 @@ public class PlayerShoot : NetworkBehaviour
 
         if(currentWeapon.bullets <= 0)
         {
-            weaponManager.Reload();
+            // cant fire - you have to reload!
+            // weaponManager.Reload();
             return;
         }
 
