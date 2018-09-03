@@ -20,7 +20,7 @@ public class PlayerShoot : NetworkBehaviour
     {
         if(cam == null)
         {
-            Debug.Log("No camera referenced!");
+            // Debug.Log("No camera referenced!");
             // disabled component
             this.enabled = false;
         }
@@ -35,6 +35,15 @@ public class PlayerShoot : NetworkBehaviour
         if(PauseMenu.isOn)
         {
             return;
+        }
+
+        if(currentWeapon.bullets < currentWeapon.maxBullets)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                weaponManager.Reload();
+                return;
+            }
         }
 
         if(currentWeapon.fireRate <= 0f)
@@ -95,10 +104,18 @@ public class PlayerShoot : NetworkBehaviour
     [Client]
     void Shoot()
     {
-        if(!isLocalPlayer)
+        if(!isLocalPlayer || weaponManager.isReloading)
         {
             return;
         }
+
+        if(currentWeapon.bullets <= 0)
+        {
+            weaponManager.Reload();
+            return;
+        }
+
+        currentWeapon.bullets--;
 
         // we are shooting, call the on shoot method on the server
         CmdOnShoot();
@@ -123,7 +140,7 @@ public class PlayerShoot : NetworkBehaviour
     void CmdPlayerShot(string _playerID, int _damage, string _sourceID)
     {
         // player has been shot
-        Debug.Log(_playerID + " has been shot!");
+        // Debug.Log(_playerID + " has been shot!");
 
         Player _player = GameManager.GetPlayer(_playerID);
 

@@ -10,5 +10,18 @@ public class PlayerWeapon
 
     public float fireRate = 0f;
 
+    public int maxBullets = 30;
+
+    [HideInInspector]
+    public int bullets;
+
+    public float reloadTime = 5f;
+
+    // construtor
+    public PlayerWeapon()
+    {
+        bullets = maxBullets;
+    }
+
     public GameObject graphics;
 }
