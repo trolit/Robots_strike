@@ -8,6 +8,9 @@ public class PlayerUI : MonoBehaviour
     [SerializeField]
     GameObject pauseMenu;
 
+    [SerializeField]
+    GameObject scoreBoard;
+
     private PlayerController controller;
 
     private void Start()
@@ -32,6 +35,14 @@ public class PlayerUI : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauseMenu();
+        }
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            scoreBoard.SetActive(true);
+        }
+        else if(Input.GetKeyUp(KeyCode.Tab))
+        {
+            scoreBoard.SetActive(false);
         }
     }
 

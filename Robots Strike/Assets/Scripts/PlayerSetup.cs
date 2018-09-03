@@ -53,6 +53,18 @@ public class PlayerSetup : NetworkBehaviour
             ui.SetController(GetComponent<PlayerController>());
 
             GetComponent<Player>().SetupPlayer();
+
+            string _username = "Loading...";
+            if(UserAccountManager.IsLoggedIn)
+            {
+                _username = UserAccountManager.LoggedIn_Username;
+            }
+            else
+            {
+                _username = transform.name;
+            }
+
+            CmdSetUsername(transform.name, _username);
         }
     }
 
@@ -76,6 +88,18 @@ public class PlayerSetup : NetworkBehaviour
         Player _player = GetComponent<Player>();
 
         GameManager.RegisterPlayer(_netID, _player);
+    }
+
+    // only on server executed
+    [Command]
+    void CmdSetUsername(string playerID, string username)
+    {
+        Player player = GameManager.GetPlayer(playerID);
+        if(player != null)
+        {
+            Debug.Log(username + " joined!");
+            player.username = username;
+        }
     }
 
     void AssignRemoteLayer()
