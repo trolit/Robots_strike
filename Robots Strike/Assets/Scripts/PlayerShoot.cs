@@ -6,6 +6,8 @@ public class PlayerShoot : NetworkBehaviour
 {
     private const string PLAYER_TAG = "Player";
 
+    AudioSource shootSoundEffect;
+
     [SerializeField]
     private Camera cam;
 
@@ -25,6 +27,7 @@ public class PlayerShoot : NetworkBehaviour
             this.enabled = false;
         }
 
+        shootSoundEffect = GetComponent<AudioSource>();
         weaponManager = GetComponent<WeaponManager>();
     }
 
@@ -117,6 +120,9 @@ public class PlayerShoot : NetworkBehaviour
         }
 
         currentWeapon.bullets--;
+
+        // play sound effect
+        shootSoundEffect.Play();
 
         // we are shooting, call the on shoot method on the server
         CmdOnShoot();
