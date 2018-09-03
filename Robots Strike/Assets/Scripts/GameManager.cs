@@ -13,6 +13,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject sceneCamera;
 
+    // defining type
+    public delegate void OnPlayerKilledCallback(string player, string source);
+
+    // callback - use whenever you want to call multiple methods from one place
+    // many objects can be "attached"/subscribe to this one 
+    public OnPlayerKilledCallback onPlayerKilledCallback;
 
     private void Awake()
     {

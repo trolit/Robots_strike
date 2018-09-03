@@ -209,7 +209,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Room name (2/6)
+  m_Text: Room name <color=red>(2/6)</color>
 --- !u!114 &114823063968746632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,8 +297,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 137.04999, y: -12.8}
-  m_SizeDelta: {x: 274.1, y: 25.6}
+  m_AnchoredPosition: {x: 109.00001, y: -12.8}
+  m_SizeDelta: {x: 218, y: 25.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224816490440705184
 RectTransform:
