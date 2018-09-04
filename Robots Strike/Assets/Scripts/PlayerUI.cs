@@ -13,9 +13,6 @@ public class PlayerUI : MonoBehaviour
     public Text ammoText;
 
     [SerializeField]
-    Text warningText;
-
-    [SerializeField]
     GameObject pauseMenu;
 
     [SerializeField]
@@ -62,15 +59,6 @@ public class PlayerUI : MonoBehaviour
         SetFuelAmount(controller.GetThrusterFuelAmount());
         SetHealthAmount(player.GetHealthPct());
         SetAmmoAmount(weaponManager.GetCurrentWeapon().bullets);
-
-        if(weaponManager.GetCurrentWeapon().bullets <= 5)
-        {
-            warningText.text = "low ammunition";
-        }
-        else
-        {
-            warningText.text = "";
-        }
 
         if(Input.GetKeyDown(KeyCode.Escape))
         {

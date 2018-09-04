@@ -9,6 +9,8 @@ public class Player : NetworkBehaviour
     public static AudioSource shootSFX;
     public static AudioSource reloadSFX;
 
+    public PlayerWeapon playerWeapon;
+
     [SyncVar]
     private bool _isDead = false;
     public bool isDead

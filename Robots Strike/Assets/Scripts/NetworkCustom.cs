@@ -5,7 +5,7 @@ using UnityEngine.Networking.NetworkSystem;
 public class NetworkCustom : NetworkManager
 {
 
-    public int chosenCharacter = 0;
+    public int chosenCharacter;
     public GameObject[] characters;
 
     //subclass for sending network messages
@@ -60,4 +60,10 @@ public class NetworkCustom : NetworkManager
     {
         chosenCharacter = 1;
     }
+
+    public void btn3()
+    {
+        chosenCharacter = 2;
+    }
+
 }

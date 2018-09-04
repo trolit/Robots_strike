@@ -4,7 +4,6 @@ using UnityEngine.Networking;
 
 public class ChooseHero : MonoBehaviour
 {
-
     public GameObject characterSelect;
 
     public void PickHero(int hero)

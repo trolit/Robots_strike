@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour {
 
         if(Cursor.lockState != CursorLockMode.Locked)
         {
+            //Locked !!
             Cursor.lockState = CursorLockMode.Locked;
         }
 
