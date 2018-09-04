@@ -49,7 +49,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362213822202124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -822479833, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 1baf8925c6cba554798c78c76373ff68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
@@ -123,6 +123,11 @@ MonoBehaviour:
   matchSize: 4
   isNetworkActive: 0
   matchMaker: {fileID: 0}
+  chosenCharacter: 0
+  characters:
+  - {fileID: 1701147880447682, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
+  - {fileID: 1701147880447682, guid: ec80f8e682d59404e8759a4b0e3b553a, type: 2}
+  - {fileID: 1701147880447682, guid: 975c303b3f7c7df49b46408a5b1bcf10, type: 2}
 --- !u!114 &114164135347182610
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,6 +5,10 @@ using System.Collections;
 [RequireComponent(typeof(PlayerSetup))]
 public class Player : NetworkBehaviour
 {
+    public AudioSource[] sounds;
+    public static AudioSource shootSFX;
+    public static AudioSource reloadSFX;
+
     [SyncVar]
     private bool _isDead = false;
     public bool isDead
@@ -47,6 +51,13 @@ public class Player : NetworkBehaviour
     public int deaths;
 
     private bool isFirstSetup = true;
+
+    private void Start()
+    {
+        sounds = GetComponents<AudioSource>();
+        shootSFX = sounds[0];
+        reloadSFX = sounds[1];
+    }
 
     public void SetupPlayer()
     {

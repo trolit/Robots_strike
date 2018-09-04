@@ -70,6 +70,8 @@ public class WeaponManager : NetworkBehaviour
 
         CmdOnReload();
 
+        Player.reloadSFX.Play();
+
         yield return new WaitForSeconds(currentWeapon.reloadTime);
         currentWeapon.bullets = currentWeapon.maxBullets;
 
