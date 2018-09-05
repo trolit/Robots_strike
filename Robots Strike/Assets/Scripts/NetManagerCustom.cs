@@ -20,7 +20,6 @@ public class NetManagerCustom : NetworkManager
     // in the Spawn Info -> Registered Spawnable Prefabs section 
     public short playerPrefabIndex;
 
-
     public override void OnStartServer()
     {
         NetworkServer.RegisterHandler(MsgTypes.PlayerPrefab, OnResponsePrefab);
@@ -74,18 +73,5 @@ public class NetManagerCustom : NetworkManager
         {
             playerPrefabIndex = 2;
         }
-    }
-
-    public void btn1()
-    {
-        playerPrefabIndex = 0;
-    }
-    public void btn2()
-    {
-        playerPrefabIndex = 1;
-    }
-    public void btn3()
-    {
-        playerPrefabIndex = 2;
     }
 }

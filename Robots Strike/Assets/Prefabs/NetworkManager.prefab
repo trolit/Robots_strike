@@ -127,6 +127,9 @@ MonoBehaviour:
   isNetworkActive: 0
   matchMaker: {fileID: 0}
   playerPrefabIndex: 0
+  PC1: {fileID: 0}
+  PC2: {fileID: 0}
+  PC3: {fileID: 0}
 --- !u!114 &114164135347182610
 MonoBehaviour:
   m_ObjectHideFlags: 1
