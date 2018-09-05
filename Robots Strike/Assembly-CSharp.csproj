@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\KillFeedItem.cs" />
     <Compile Include="Assets\Scripts\LoginMenu.cs" />
     <Compile Include="Assets\Scripts\MatchSettings.cs" />
+    <Compile Include="Assets\Scripts\NetManagerCustom.cs" />
     <Compile Include="Assets\Scripts\NetworkCustom.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />

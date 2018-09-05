@@ -50,7 +50,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362213822202124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1baf8925c6cba554798c78c76373ff68, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3b8e87c283b4e468d603c6954e8354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_MaxDelay: 0.01
   m_LogLevel: 2
   m_PlayerPrefab: {fileID: 0}
-  m_AutoCreatePlayer: 0
+  m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 1
   m_OfflineScene: Lobby
   m_OnlineScene: MainLevel
@@ -126,11 +126,7 @@ MonoBehaviour:
   matchSize: 4
   isNetworkActive: 0
   matchMaker: {fileID: 0}
-  chosenCharacter: 1
-  characters:
-  - {fileID: 1701147880447682, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
-  - {fileID: 1701147880447682, guid: ec80f8e682d59404e8759a4b0e3b553a, type: 2}
-  - {fileID: 1701147880447682, guid: 975c303b3f7c7df49b46408a5b1bcf10, type: 2}
+  playerPrefabIndex: 0
 --- !u!114 &114164135347182610
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -70,6 +70,7 @@ public class WeaponManager : NetworkBehaviour
 
         CmdOnReload();
 
+        if(isLocalPlayer)
         Player.reloadSFX.Play();
 
         yield return new WaitForSeconds(currentWeapon.reloadTime);

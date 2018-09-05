@@ -118,6 +118,7 @@ public class PlayerShoot : NetworkBehaviour
         currentWeapon.bullets--;
 
         // play sound effect
+        if(isLocalPlayer)
         Player.shootSFX.Play();
 
         // we are shooting, call the on shoot method on the server
