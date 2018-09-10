@@ -130,6 +130,6 @@ Material:
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
-    - _TranslucencyColor: {r: 0, g: 1, b: 0.9215815, a: 1}
+    - _TranslucencyColor: {r: 0, g: 1, b: 0.92156863, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}

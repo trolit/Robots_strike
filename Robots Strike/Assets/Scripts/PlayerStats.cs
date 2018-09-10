@@ -21,7 +21,7 @@ public class PlayerStats : MonoBehaviour
             return;
         }
 
-        killCount.text = DataTranslator.DataToKills(data).ToString() + " KILLS";
-        deathCount.text = DataTranslator.DataToDeaths(data).ToString() + " DEATHS";
+        killCount.text = DataTranslator.DataToKills(data).ToString();
+        deathCount.text = DataTranslator.DataToDeaths(data).ToString();
     }
 }
