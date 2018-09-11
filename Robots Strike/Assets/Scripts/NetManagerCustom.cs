@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MsgTypes
 {
@@ -59,17 +60,22 @@ public class NetManagerCustom : NetworkManager
     // on toggle, this function is called, which updates the playerPrefabIndex
     // The index will be the number from the registered spawnable prefabs that 
     // you want for your player
+
     public void UpdatePC()
     {
-        if (GameObject.Find("PC1").GetComponent<Toggle>().isOn)
+        Toggle PC1 = GameObject.Find("PC1").GetComponent<Toggle>();
+        Toggle PC2 = GameObject.Find("PC2").GetComponent<Toggle>();
+        Toggle PC3 = GameObject.Find("PC3").GetComponent<Toggle>();
+
+        if (PC1.isOn)
         {
             playerPrefabIndex = 0;
         }
-        else if (GameObject.Find("PC2").GetComponent<Toggle>().isOn)
+        else if (PC2.isOn)
         {
             playerPrefabIndex = 1;
         }
-        else if (GameObject.Find("PC3").GetComponent<Toggle>().isOn)
+        else if (PC3.isOn)
         {
             playerPrefabIndex = 2;
         }

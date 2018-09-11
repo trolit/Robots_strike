@@ -37,6 +37,7 @@ public class HostGame : MonoBehaviour
             networkManager.StartMatchMaker();
         }
 
+        // check what was previous map to update dropdown 
         CheckMap();
     }
 
