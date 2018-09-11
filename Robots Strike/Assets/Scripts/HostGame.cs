@@ -13,6 +13,20 @@ public class HostGame : MonoBehaviour
 
     private NetworkManager networkManager;
 
+    private void CheckMap()
+    {
+        if (networkManager.onlineScene == "arena")
+        {
+            levelChoose.value = 0;
+        }
+        else
+        {
+            levelChoose.value = 1;
+        }
+
+        levelChoose.RefreshShownValue();
+    }
+
     private void Start()
     {
         networkManager = NetworkManager.singleton;
@@ -22,6 +36,8 @@ public class HostGame : MonoBehaviour
         {
             networkManager.StartMatchMaker();
         }
+
+        CheckMap();
     }
 
     public void SetRoomName(string _name)

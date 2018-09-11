@@ -62,11 +62,12 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 0}
+  m_PlayerPrefab: {fileID: 1701147880447682, guid: 157d8e1b5d460cc4e9e7e8c2b1f6b860,
+    type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 1
   m_OfflineScene: Lobby
-  m_OnlineScene: MainLevel
+  m_OnlineScene: arena
   m_SpawnPrefabs:
   - {fileID: 1701147880447682, guid: 9f55b66d2e6592849a02efd20fca32f1, type: 2}
   - {fileID: 1701147880447682, guid: ec80f8e682d59404e8759a4b0e3b553a, type: 2}
@@ -127,9 +128,6 @@ MonoBehaviour:
   isNetworkActive: 0
   matchMaker: {fileID: 0}
   playerPrefabIndex: 0
-  PC1: {fileID: 0}
-  PC2: {fileID: 0}
-  PC3: {fileID: 0}
 --- !u!114 &114164135347182610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,3 +155,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomSize: 6
+  levelChoose: {fileID: 0}
