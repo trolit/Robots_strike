@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Arena\Example\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
     <Compile Include="Assets\Database Control Free\Demos\C#\Scripts\dcDemo_MenuControl_CSharp.cs" />
+    <Compile Include="Assets\Desert Environment\Example\AutoMoveAndRotate.cs" />
     <Compile Include="Assets\Scripts\DataTranslator.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HostGame.cs" />
@@ -93,6 +94,7 @@
     <None Include="Assets\Database Control Free\Demos\UnityScript\Readme.txt" />
     <None Include="Assets\Editor Default Resources\Database Control Free\DCF_EditorData.txt" />
     <None Include="Assets\Arena\Example\ImageEffects\Shaders\SSAOShader.shader" />
+    <None Include="Assets\Desert Environment\Models\Shaders\WindShader.shader" />
     <None Include="Assets\Database Control Free\Resources\DCF_RuntimeData.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Git/bin/AbovetheLaw/Robots Strike/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
