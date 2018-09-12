@@ -33,26 +33,26 @@ public class NetManagerCustom : NetworkManager
             if (Input.GetKeyDown(KeyCode.I))
             {
                 playerPrefabIndex = 0;
-                classText.text = "Recon";
+                classText.text = "<color=cyan>Recon</color>";
             }
             else if(Input.GetKeyDown(KeyCode.O))
             {
                 playerPrefabIndex = 1;
-                classText.text = "Sniper";
+                classText.text = "<color=red>Sniper</color>";
             }
             else if(Input.GetKeyDown(KeyCode.P))
             {
                 playerPrefabIndex = 2;
-                classText.text = "Soldier";
+                classText.text = "<color=#00FF0C>Soldier</color>";
             }
             else
             {
                 if (playerPrefabIndex == 0)
-                    classText.text = "Recon";
+                    classText.text = "<color=cyan>Recon</color>";
                 else if (playerPrefabIndex == 1)
-                    classText.text = "Sniper";
+                    classText.text = "<color=red>Sniper</color>";
                 else if (playerPrefabIndex == 2)
-                    classText.text = "Soldier";
+                    classText.text = "<color=#00FF0C>Soldier</color>";
             }
         }
     }

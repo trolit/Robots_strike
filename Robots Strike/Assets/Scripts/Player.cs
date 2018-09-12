@@ -57,8 +57,11 @@ public class Player : NetworkBehaviour
     private void Start()
     {
         sounds = GetComponents<AudioSource>();
-        shootSFX = sounds[0];
-        reloadSFX = sounds[1];
+        if(isLocalPlayer)
+        {
+            shootSFX = sounds[0];
+            reloadSFX = sounds[1];
+        }
     }
 
     public void SetupPlayer()
