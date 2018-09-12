@@ -25,22 +25,22 @@ Wersja: 0.5
 
 
 #### Ekran startowy: ####
-![Error](https://github.com/trolit/AbovetheLaw/blob/master/images/mainmenu.png)
+![Error](https://github.com/trolit/Robots_strike/blob/master/images/mainmenu.PNG)
 
 
 
 #### Widok lobby: ####
-![Error](https://github.com/trolit/AbovetheLaw/blob/master/images/lobby.png)
+![Error](https://github.com/trolit/Robots_strike/blob/master/images/lobby.PNG)
 
 
 
 #### Dostępne klasy i ich specyfika: ####
-![Error](https://github.com/trolit/AbovetheLaw/blob/master/images/classInfo.png)
+![Error](https://github.com/trolit/Robots_strike/blob/master/images/classInfo.PNG)
 
 
 
 #### Interfejs gracza: ####
-![Error](https://github.com/trolit/AbovetheLaw/blob/master/images/playerUI.png)
+![Error](https://github.com/trolit/Robots_strike/blob/master/images/playerUI.PNG)
 
 
 
