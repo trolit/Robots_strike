@@ -93,7 +93,6 @@
     <Compile Include="Assets\Scripts\WeaponManager.cs" />
     <None Include="Assets\Database Control Free\Demos\UnityScript\Readme.txt" />
     <None Include="Assets\Editor Default Resources\Database Control Free\DCF_EditorData.txt" />
-    <None Include="Assets\Arena\Example\ImageEffects\Shaders\SSAOShader.shader" />
     <None Include="Assets\Desert Environment\Models\Shaders\WindShader.shader" />
     <None Include="Assets\Database Control Free\Resources\DCF_RuntimeData.txt" />
     <Reference Include="UnityEditor.StandardEvents">

@@ -16,7 +16,8 @@ public class PauseMenu : MonoBehaviour
     public void LeaveRoom()
     {
         MatchInfo matchInfo = networkManager.matchInfo;
-        networkManager.matchMaker.DropConnection(matchInfo.networkId, matchInfo.nodeId, 0, networkManager.OnDropConnection);
+        // networkManager.matchMaker.DropConnection(matchInfo.networkId, matchInfo.nodeId, 0, networkManager.OnDropConnection);
         networkManager.StopHost();
+        networkManager.ServerChangeScene("Lobby");
     }
 }
