@@ -10,7 +10,8 @@ Thirslund'a.
 
 <p align="left">
 <b>Informacje o projekcie:</b></br>
-Data założenia repozytorium: 03.08.18r. <br/>
+Data założenia repozytorium: 03.08.18r <br/>
+Ramy czasowe: 29.07.2018 – 19.09.2018 <br/>
 Projekt wykonywany w: Unity 2018.2.1f1(64-bit) <br/>
 Język programowania: C# <br/>
 Platforma: PC <br/>
